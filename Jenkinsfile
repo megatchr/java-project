@@ -14,14 +14,10 @@ pipeline {
                   sh 'ant -f build.xml -v'
             }
         }
-        stage('Test') {
-            steps {
-                echo 'Testing..'
-            }
-        }
         stage('Deploy') {
             steps {
-                echo 'Deploying....'
+             sh 'ls ${WORKSPACE}/dist/rectangle-${BUILD_NUMBER}.jar'
+             sh 'aws'
             }
         }
     }
