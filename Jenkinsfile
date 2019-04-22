@@ -16,7 +16,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-             sh 'aws s3 cp ${WORKSPACE}/dist/rectangle-${BUILD_NUMBER}.jar s3://ameg9454-hw10'
+             sh 'aws s3 cp ${WORKSPACE}/dist/rectangle-${BUILD_NUMBER}.jar s3://ameg9454-hw10/rectangle-${BUILD_NUMBER}.jar'
           
             }
         }
