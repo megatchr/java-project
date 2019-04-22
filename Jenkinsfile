@@ -11,7 +11,7 @@ pipeline {
         }
         stage('Build') {
             steps {
-                echo 'Building src..'
+                  sh 'ant -f build.xml -v'
             }
         }
         stage('Test') {
